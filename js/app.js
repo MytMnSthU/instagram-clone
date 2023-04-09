@@ -1,0 +1,1 @@
+document.body.onload = () => (document.querySelector(".loading-page").style.display = "none");

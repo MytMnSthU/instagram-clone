@@ -1,0 +1,139 @@
+* {
+    /* outline: 1px solid violet; */
+}
+
+:root {
+    /* breakpoints */
+    --bs-breakpoint-sm: 768px !important;
+    --bs-breakpoint-md: 1265px !important;
+
+    /* img sizes  */
+    --img-lg: 70px;
+    --img-md: 55px;
+    --img-sm: 30px;
+    --img-xs: 20px;
+}
+
+body {
+    font-family: "Segoe Ui";
+}
+
+img {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.pt-6 {
+    padding-top: 4.5rem;
+}
+
+.fs-xl {
+    font-size: 24px;
+}
+
+.fs-lg {
+    font-size: 20px;
+}
+
+.fs-md {
+    font-size: 16px;
+}
+
+.fs-normal {
+    font-size: 14px;
+}
+
+.fs-sm {
+    font-size: 12px;
+}
+
+.fs-xs {
+    font-size: 10px;
+}
+
+.ig-border {
+    width: var(--img-md);
+    height: var(--img-md);
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+    );
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.ig-border.img-sm {
+    padding: 1px;
+}
+.ig-border.img-sm img {
+    border: 1px solid #fff;
+}
+
+.ig-border img {
+    border: 2px solid #fff;
+}
+
+.img-lg {
+    width: var(--img-lg);
+    height: var(--img-lg);
+}
+
+.img-md {
+    width: var(--img-md);
+    height: var(--img-md);
+}
+
+.img-sm {
+    width: var(--img-sm);
+    height: var(--img-sm);
+}
+
+.img-xs {
+    width: var(--img-xs);
+    height: var(--img-xs);
+}
+
+.profile-card {
+    background-color: #fff;
+
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.profile-card > * {
+    line-height: 1.1;
+}
+
+.profile-card-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-card-row a:nth-last-child(1) {
+    margin-left: auto;
+}
+
+.profile-card-column {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.fw-regular {
+    font-weight: 400;
+}

@@ -1,0 +1,303 @@
+.side-nav {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+
+    padding: 12px;
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-right: 1px solid #ccc;
+    transition: width 0.5s;
+
+    z-index: 10;
+}
+
+.side-nav .nav-logo,
+.side-nav .navbar,
+.side-nav .nav-link {
+    width: 100%;
+}
+
+.side-nav .nav-logo {
+    height: 75px;
+    padding: 25px 12px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.side-nav .logo-insta-text,
+.side-nav .logo-insta-icon {
+    position: absolute;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.side-nav .logo-insta-text {
+    width: 105px;
+}
+
+.side-nav .logo-insta-icon {
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+}
+
+.side-nav .navbar {
+    background-color: #fff;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-nav.minimized {
+    width: 75px;
+    overflow: hidden;
+}
+
+.side-nav.minimized .nav-link {
+    animation: center 0.3s 1 forwards;
+}
+
+.side-nav.minimized .nav-link-text {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.side-nav.minimized .logo-insta-icon {
+    opacity: 1;
+}
+
+.side-nav.minimized .logo-insta-text {
+    opacity: 0;
+}
+
+.side-nav .nav-link {
+    color: #000;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-radius: 100vmax;
+    text-decoration: none;
+
+    transition: width 0.1s ease-out;
+}
+
+.side-nav .nav-link-more {
+    margin-top: auto;
+}
+
+nav .nav-link {
+    padding: 8px;
+    margin: 4px 0;
+}
+
+nav .nav-link:visited {
+    color: #000;
+}
+
+nav .nav-link:hover {
+    background-color: rgb(250, 250, 250);
+    color: #000;
+}
+
+nav .nav-link:hover .nav-link-icon {
+    scale: 1.15;
+}
+
+nav .nav-link-icon {
+    font-size: 24px;
+    transition: scale 0.2s ease-in;
+}
+
+nav .nav-link-text {
+    text-transform: capitalize;
+    font-weight: normal;
+    margin-left: 16px;
+    transition: width 0.3s;
+}
+
+nav .outlined-active {
+    outline: 1px solid #ccc;
+}
+
+nav .nav-link.active .nav-link-text {
+    font-weight: bold;
+}
+
+nav .nav-link-profile.active .profile-img {
+    outline: 2px solid #333;
+}
+
+nav .bi,
+nav .nav-link-text {
+    pointer-events: none;
+}
+
+.profile-img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.box {
+    width: 400px;
+    height: 100vh;
+    background-color: #fff;
+
+    position: absolute;
+    left: 75px;
+    top: 0;
+
+    z-index: -1;
+    box-shadow: 15px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0 1em 1em 0;
+
+    translate: -200%;
+}
+
+.box.show {
+    animation: slide 0.3s 1 0.25s forwards;
+}
+
+.box__form {
+    background-color: #eee;
+    padding: 10px;
+    display: flex;
+    border-radius: 8px;
+}
+
+.box__form input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.box__form input:focus {
+    outline: none;
+}
+
+.box__form .bi {
+    cursor: pointer;
+}
+
+.box__item {
+    cursor: pointer;
+}
+.box__item:hover {
+    background-color: #f9f9f9;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+}
+
+.noti-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--bs-primary);
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-link {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 1265px) {
+    .nav-col,
+    .nav {
+        width: 75px;
+    }
+
+    .side-nav .logo-insta-icon {
+        opacity: 1;
+    }
+
+    .side-nav .logo-insta-text {
+        opacity: 0;
+    }
+
+    .nav-link-text {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-col {
+        width: 100%;
+    }
+}
+
+@keyframes ani1 {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 75px;
+    }
+}
+
+@keyframes slide {
+    0% {
+        translate: -100%;
+        z-index: -1;
+    }
+    50% {
+        z-index: -1;
+    }
+    100% {
+        translate: 0;
+        z-index: 1;
+    }
+}
+
+@keyframes center {
+    0% {
+        justify-content: flex-start;
+    }
+    90% {
+        justify-content: flex-start;
+    }
+
+    100% {
+        justify-content: center;
+    }
+}
+
+@keyframes fade {
+    0% {
+        width: 100%;
+        opacity: 1;
+        overflow: visible;
+        display: block;
+    }
+    90% {
+        width: 100%;
+        display: block;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        display: none;
+    }
+}
